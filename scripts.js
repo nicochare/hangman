@@ -35,6 +35,7 @@ const kept_restart = document.getElementById("kept_restart");
 
 var _guess_;
 var lifes = 6;
+const won_games = 0;
 
 function getRandomNumber() {
     return Math.floor(Math.random() * hangmanWords.length) + 1;
@@ -143,6 +144,7 @@ function end(result) {
 }
 
 function won() {
+    won_games = won_games + 1;
     end(true);
 }
 
@@ -171,6 +173,10 @@ function key_clicked(key) {
     check_inword(key.innerText);
 }
     
+function get_won_games() {
+    return won_games;
+}
+
 start_modal.show();
 rules_button.addEventListener("click", function() {
     start_modal.hide();
@@ -184,3 +190,4 @@ rules_button.addEventListener("click", function() {
     
 const play_button = document.getElementById("play");
 play_button.addEventListener("click", start);
+get_won_games();
