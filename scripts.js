@@ -35,7 +35,7 @@ const kept_restart = document.getElementById("kept_restart");
 
 var _guess_;
 var lifes = 6;
-const won_games = 0;
+var won_games = 0;
 
 function getRandomNumber() {
     return Math.floor(Math.random() * hangmanWords.length) + 1;
@@ -50,7 +50,7 @@ function set_underscores(l) {
     for (var i = 0; i < l; i++) {
         const underscore = document.createElement("p");
         underscore.innerText = "_";
-        underscore.classList = "fs-1 hangman-font underscore";
+        underscore.classList = "fs-1 underscore";
         underscores_cont.appendChild(underscore);
     }
     unders_list = underscores_cont.childNodes;
@@ -88,10 +88,7 @@ function lose_life() {
 
 function no_underscores() {
     var i = 0;
-    while (unders_list[i].innerText != "_" && i < _guess_.length-1)
-    {
-        i += 1;
-    }
+    while (unders_list[i].innerText != "_" && i < _guess_.length-1) { i += 1; }
     if (unders_list[i].innerText != "_") {
         return true;
     } else {
