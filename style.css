@@ -1,0 +1,186 @@
+/* Fonts */
+@font-face {
+    font-family: typewriter;
+    src: url(./fonts/type.otf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(./fonts/MyriadPro-Light.otf);
+}
+
+html {
+    font-family: light;
+}
+.background-image-div {
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    place-self: center;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+.hangman-font {
+    font-family: typewriter;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.space-top {
+    padding-top: 17vh;
+}
+
+.underscores {
+    margin-left: 2vh;
+    position: relative;
+    align-self: end;
+    flex-wrap: wrap;
+}
+
+.keyboard {
+    justify-content: center;
+    display: grid;
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    right: 0;
+}
+
+.keyboard-row {
+    justify-content: center;
+}
+
+.key {
+    padding: 2vh;
+    font-size: x-large;
+    margin: 1vh 0;
+}
+
+@media (max-width: 600px) {
+    .key {
+        margin: 0.5vh 0;
+        padding: 2vw 3.1vw;
+        font-size: large;
+    }    
+    .keyboard-row {
+        max-width: 100% !important;
+        margin: 0;
+    }
+    .top-part {
+        display: block !important;
+    }
+    .underscores {
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+.key:disabled {
+    background-color: #dedede;
+}
+
+.w-min {
+    max-width: min-content;
+}
+
+.underscore {
+    padding: 0 2vh;
+    margin-bottom: auto;
+}
+
+.hangplace {
+    position: relative;
+    width: max-content !important;
+}
+
+.stickman {
+    position: absolute;
+    right: 0;
+    top: 5.4vh;
+    margin-right: -2.7vh;
+    max-width: max-content;
+    max-height: max-content;
+}
+
+.w-1 {
+    width: 5vh;
+}
+
+.w-2 {
+    width: 10vh;
+}
+
+.h-width {
+    max-width: 7.5vh;
+}
+
+.arms {
+    width: 4vh;
+}
+
+.arms, .legs, .head {
+    max-height: 7.5vh;
+}
+
+.hanger {
+    height: 40vh;
+}
+
+.w-0-5 {
+    max-width: 0.5vh !important;
+}
+
+.h-2 {
+    height: 10vh !important;
+}
+
+.flashing {
+    animation: flash 1300ms infinite;
+}
+
+@keyframes flash {
+    0% {
+      background-color: #0077be;
+      box-shadow: 0 0 3px #0077be;
+    }
+    50% {
+      background-color: #4c93cc;
+      box-shadow: 0 0 10px #4c93cc;
+    }
+    100% {
+      background-color: #0077be;
+      box-shadow: 0 0 3px #0077be;
+    }
+}
+
+.size_toast_img {
+    width: 2vh;
+    height: 3vh;
+}
+
+.kept_guessing_restart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 5vh;
+    max-width: min-content;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
