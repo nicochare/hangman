@@ -12,6 +12,11 @@
 html {
     font-family: light;
 }
+
+body {
+    background-color: #1e1e1e !important;
+}
+
 .background-image-div {
     overflow: hidden;
     position: absolute;
@@ -28,6 +33,14 @@ html {
     place-self: center;
     opacity: 0.03;
     z-index: -1;
+}
+
+.filter-color {
+    filter: invert(54%) sepia(14%) saturate(0%) hue-rotate(188deg) brightness(94%) contrast(102%);
+}
+
+.background-game {
+    background-color: ;
 }
 
 .hangman-font {
@@ -66,7 +79,11 @@ html {
     padding: 2vh;
     font-size: x-large;
     margin: 1vh 0;
+    background-color: #353535;
+    color: #858585;
+    border: 0;
 }
+
 
 @media (max-width: 600px) {
     .key {
@@ -88,7 +105,11 @@ html {
 }
 
 .key:disabled {
-    background-color: #dedede;
+    background-color: #4e4e4e;
+}
+
+.key:hover {
+    background-color: #4e4e4e;
 }
 
 .w-min {
@@ -98,6 +119,7 @@ html {
 .underscore {
     padding: 0 2vh;
     margin-bottom: auto;
+    color: #858585;
 }
 
 .hangplace {
