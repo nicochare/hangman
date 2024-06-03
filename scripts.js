@@ -58,7 +58,7 @@ function set_underscores(l) {
 
 function start() {
     _guess_ = getRandomWord();
-    _guess_ = _guess_.toLowerCase();
+    _guess_ = _guess_.toUpperCase();
     var w_length = _guess_.length;
     hanger.classList.toggle("invisible");
     lifes = 6;
