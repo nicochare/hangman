@@ -2,6 +2,7 @@
 
 This is a simple hangman game.
 
-Also hosted in: 
 ---
+Also hosted in: 
+
 https://nicolas-chareca-hangman.netlify.app
